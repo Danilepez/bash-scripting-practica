@@ -8,22 +8,26 @@ TIMESTAMP=$(date +"%Y-%m-%d %H:%M:%S")
 
 echo "[$TIMESTAMP] --- INICIO del Despliegue ---" >> "$LOG_FILE"
 
-# Crear el directorio de despliegue si no existe
-mkdir -p "$APP_DIR"
-
-cd "$APP_DIR" || { echo "[$TIMESTAMP] [ERROR] No se pudo cambiar al directorio $APP_DIR. Abortando."; exit 1; }
-
 # 1. Clonar o actualizar el repositorio
-if [ -d ".git" ]; then
+if [ -d "$APP_DIR/.git" ]; then
     # El repositorio ya existe, hacer 'git pull'
+    cd "$APP_DIR" || { echo "[$TIMESTAMP] [ERROR] No se pudo cambiar al directorio $APP_DIR. Abortando."; exit 1; }
     echo "[$TIMESTAMP] Actualizando repositorio..." >> "$LOG_FILE"
     git pull origin main # Asume que la rama principal es 'main'
     PULL_STATUS=$?
-else
-    # El repositorio no existe, hacer 'git clone'
+elif [ -d "$APP_DIR" ]; then
+    # El directorio existe pero no es un repo git, limpiarlo y clonar
+    rm -rf "$APP_DIR"
     echo "[$TIMESTAMP] Clonando repositorio..." >> "$LOG_FILE"
-    git clone "$REPO_URL" .
+    git clone "$REPO_URL" "$APP_DIR"
     PULL_STATUS=$?
+    cd "$APP_DIR" || { echo "[$TIMESTAMP] [ERROR] No se pudo cambiar al directorio $APP_DIR. Abortando."; exit 1; }
+else
+    # El directorio no existe, clonar
+    echo "[$TIMESTAMP] Clonando repositorio..." >> "$LOG_FILE"
+    git clone "$REPO_URL" "$APP_DIR"
+    PULL_STATUS=$?
+    cd "$APP_DIR" || { echo "[$TIMESTAMP] [ERROR] No se pudo cambiar al directorio $APP_DIR. Abortando."; exit 1; }
 fi
 
 # Control de errores (Bonus)
