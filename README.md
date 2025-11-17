@@ -51,6 +51,3 @@ Reemplaza con tu email y contraseña de aplicación de Gmail.
 2. **Nivel 2**: Ejecuta `sudo ./generate_fake_logs.sh` para crear logs falsos en /var/log. Luego `sudo ./cleanup_logs.sh`. Verifica /backup/logs y cleanup_actions.log.
 3. **Nivel 3**: Ejecuta `./deploy_app.sh`. Verifica deploy.log y notificación en Discord (configura WEBHOOK_URL).
 4. **Nivel 4**: Ejecuta `./monitor_system.sh`. Verifica alerts.log y metrics_YYYYMMDD.log. Para alertas, simula alto uso si es necesario.
-
-Nota: Los scripts están diseñados para Linux. Si editas en Windows, push al repo y ejecuta en una VM Linux.</content>
-<parameter name="filePath">d:\UPB\6to Semestre\Certificacion DevOps\bash-scripting-practica\README.md
