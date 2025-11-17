@@ -1,0 +1,19 @@
+[2025-11-16 23:24:59] --- INICIO de la Limpieza de Logs ---
+[2025-11-16 23:24:59] ELIMINADO: /var/log/bootstrap.log (Comprimido a /backup/logs/logs_20251116_232459.tar.gz)
+[2025-11-16 23:24:59] ELIMINADO: /var/log/installer/cloud-init.log (Comprimido a /backup/logs/logs_20251116_232459.tar.gz)
+[2025-11-16 23:24:59] ELIMINADO: /var/log/installer/cloud-init-output.log (Comprimido a /backup/logs/logs_20251116_232459.tar.gz)
+[2025-11-16 23:24:59] ELIMINADO: /var/log/installer/curtin-install.log (Comprimido a /backup/logs/logs_20251116_232459.tar.gz)
+[2025-11-16 23:24:59] ELIMINADO: /var/log/installer/block/discover.log (Comprimido a /backup/logs/logs_20251116_232459.tar.gz)
+[2025-11-16 23:24:59] ELIMINADO: /var/log/unattended-upgrades/unattended-upgrades-dpkg.log (Comprimido a /backup/logs/logs_20251116_232459.tar.gz)
+[2025-11-16 23:24:59] ELIMINADO: /var/log/unattended-upgrades/unattended-upgrades.log (Comprimido a /backup/logs/logs_20251116_232459.tar.gz)
+[2025-11-16 23:24:59] ELIMINADO: /var/log/unattended-upgrades/unattended-upgrades-shutdown.log (Comprimido a /backup/logs/logs_20251116_232459.tar.gz)
+[2025-11-16 23:24:59] ELIMINADO: /var/log/cloud-init.log (Comprimido a /backup/logs/logs_20251116_232459.tar.gz)
+[2025-11-16 23:24:59] ELIMINADO: /var/log/fontconfig.log (Comprimido a /backup/logs/logs_20251116_232459.tar.gz)
+[2025-11-16 23:24:59] ELIMINADO: /var/log/cloud-init-output.log (Comprimido a /backup/logs/logs_20251116_232459.tar.gz)
+[2025-11-16 23:24:59] ELIMINADO: /var/log/ubuntu-advantage-apt-hook.log (Comprimido a /backup/logs/logs_20251116_232459.tar.gz)
+[2025-11-16 23:24:59] Limpieza exitosa. Archivos antiguos eliminados y movidos a /backup/logs/logs_20251116_232459.tar.gz.
+[2025-11-16 23:24:59] --- FIN de la Limpieza de Logs ---
+[2025-11-16 23:25:32] --- INICIO de la Limpieza de Logs ---
+[2025-11-16 23:25:32] No se encontraron archivos de log con más de 7 días.
+[2025-11-16 23:30:25] --- INICIO de la Limpieza de Logs ---
+[2025-11-16 23:30:25] No se encontraron archivos de log con más de 7 días.
