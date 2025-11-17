@@ -26,7 +26,7 @@ echo "[$TIMESTAMP] --- Inicio del Monitoreo ---" >> "$METRICS_LOG"
 
 # 1. Medir Porcentaje de CPU
 # Uso 'top' y 'awk' para obtener la carga de CPU (ajusta según tu OS)
-CPU_USAGE=$(top -bn1 | grep "Cpu(s)" | awk '{print $2}' | cut -d . -f 1)
+CPU_USAGE=$(top -bn1 | grep "Cpu(s)" | awk '{print $2}' | sed 's/,/./g' | cut -d . -f 1)
 echo "[$TIMESTAMP] CPU: $CPU_USAGE%" >> "$METRICS_LOG"
 if [ "$CPU_USAGE" -ge "$CPU_THRESHOLD" ]; then
     ALERT_TRIGGERED=1

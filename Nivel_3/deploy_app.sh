@@ -3,7 +3,7 @@
 REPO_URL="https://github.com/octocat/Hello-World.git"
 APP_DIR="/tmp/clash-of-clan" 
 LOG_FILE="deploy.log"
-SERVICE_NAME="nginx"
+SERVICE_NAME="cron"
 TIMESTAMP=$(date +"%Y-%m-%d %H:%M:%S")
 
 echo "[$TIMESTAMP] --- INICIO del Despliegue ---" >> "$LOG_FILE"
