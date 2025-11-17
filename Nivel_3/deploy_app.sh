@@ -1,6 +1,6 @@
 #!/bin/bash
 
-REPO_URL="https://github.com/rayner-villalba-coderoad-com/clash-of-clan"
+REPO_URL="https://github.com/octocat/Hello-World.git"
 APP_DIR="/tmp/clash-of-clan" 
 LOG_FILE="deploy.log"
 SERVICE_NAME="nginx"
