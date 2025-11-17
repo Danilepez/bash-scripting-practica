@@ -1,7 +1,7 @@
 #!/bin/bash
 
 REPO_URL="https://github.com/rayner-villalba-coderoad-com/clash-of-clan"
-APP_DIR="/var/www/clash-of-clan" 
+APP_DIR="/tmp/clash-of-clan" 
 LOG_FILE="deploy.log"
 SERVICE_NAME="nginx"
 TIMESTAMP=$(date +"%Y-%m-%d %H:%M:%S")
@@ -52,7 +52,7 @@ fi
 echo "[$TIMESTAMP] --- FIN del Despliegue ---" >> "$LOG_FILE"
 echo "$DEPLOY_MESSAGE"
 
-BONUS: Envío de notificación (ejemplo con webhook de Discord/Slack - requiere 'curl')
+# Envío de notificación (Discord)
 WEBHOOK_URL="https://discord.com/api/webhooks/1439820804723445893/RoeSRhAEmpOKrrCXUsf66jPATTL-iiOYDyOcrAoutrjnPfeJDH6xFi2RVQUGnMgHdA6i"
 NOTIF_PAYLOAD='{"content": "Despliegue de Clash of Clans: '$DEPLOY_MESSAGE'"}'
 curl -H "Content-Type: application/json" -d "$NOTIF_PAYLOAD" "$WEBHOOK_URL"
